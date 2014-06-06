@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 5, 2014 5:15:36 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.hibernate.interceptors.entities.Animal" table="ANIMAL">
+        <id name="animalId" type="java.lang.Long">
+            <column name="ANIMALID" />
+            <generator class="identity"/>
+        </id>
+        <property name="animalName" type="java.lang.String">
+            <column name="ANIMALNAME" />
+        </property>
+        <property name="animalOffsprings" type="java.lang.Long">
+            <column name="ANIMALOFFSPRINGS" />
+        </property>
+        <property name="isCarnivore" type="java.lang.Boolean">
+            <column name="ISCARNIVORE" />
+        </property>
+        <property name="landExplored" type="java.lang.String">
+            <column name="LANDEXPLORED" />
+        </property>
+    </class>
+</hibernate-mapping>

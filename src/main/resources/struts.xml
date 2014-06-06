@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="struts-default">
+
+		<default-action-ref name="main" />
+
+		<action name="main"
+			class="com.hibernate.interceptors.actions.MainAction"
+			method="execute">
+			<result type="dispatcher">
+				/example/main.jsp
+			</result>
+		</action>
+
+		<action name="addHuman"
+			class="com.hibernate.interceptors.actions.MainAction"
+			method="add">
+			<result type="redirectAction">
+				main
+			</result>
+		</action>
+	</package>
+
+	<!-- Add addition packages and configuration here. -->
+</struts>
